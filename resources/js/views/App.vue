@@ -13,6 +13,7 @@
     <v-main>
       <TestJS :testprop="{name: 'testjs', id: '1'}"></TestJS>
       <TestTS :testprop="{name: 'testts', id: '2'}"></TestTS>
+      <TestTS :testprop="{blub: 'bla', id: '3'}"></TestTS>
     </v-main>
 
     <v-footer app>
