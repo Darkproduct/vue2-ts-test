@@ -1,0 +1,57 @@
+{
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "noImplicitAny": true,
+        "importHelpers": true,
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "allowJs": true,
+        "checkJs": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "@/*": [
+                "resources/*"
+            ],
+            "@store/*": [
+                "resources/js/store/*"
+            ],
+            "@components/*": [
+                "resources/js/components/*"
+            ]
+        },
+        "lib": [
+            "esnext",
+            "dom",
+            "dom.iterable",
+            "scripthost"
+        ],
+        "typeRoots": [
+            "node_modules/@types"
+        ],
+    },
+    "files": [
+        "resources/js/types/shims-vue.d.ts"
+    ],
+    "include": [
+        "resources/js/**/*.ts",
+        "resources/js/**/*.vue",
+        "@types/**/*.d.ts",
+    ],
+    "exclude": [
+        "node_modules",
+        ".vscode",
+        "app",
+        "bootstrap",
+        "config",
+        "database",
+        "misc",
+        "public",
+        "routes",
+        "storage",
+        "tests",
+        "vendor"
+    ]
+}
