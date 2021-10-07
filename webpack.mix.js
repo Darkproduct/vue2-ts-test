@@ -26,7 +26,6 @@ mix
       extensions: Extensions,
       alias: {
         "@": path.resolve(__dirname + "/resources"),
-        "@store": path.resolve(__dirname + "/resources/js/store"),
         "@components": path.resolve(__dirname + "/resources/js/components"),
       },
       fullySpecified: false,

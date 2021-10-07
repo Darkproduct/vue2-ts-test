@@ -11,9 +11,14 @@
     </v-app-bar>
 
     <v-main>
+      <p>Inline Prop:</p>
       <TestJS :testprop="{name: 'testjs', id: '1'}"></TestJS>
       <TestTS :testprop="{name: 'testts', id: '2'}"></TestTS>
-      <TestTS :testprop="{blub: 'bla', id: '3'}"></TestTS>
+      <TestTS :testprop="{name: 'testts-wrong-type', foo: 'bar', uuid: '550e8400-e29b-11d4-a716-446655440000'}"></TestTS>
+      <p>Bind Prop:</p>
+      <TestJS :testprop="propdatajs"></TestJS>
+      <TestTS :testprop="propdatats[0]"></TestTS>
+      <TestTS :testprop="propdatats[1]"></TestTS>
     </v-main>
 
     <v-footer app>
@@ -33,7 +38,10 @@ export default {
   },
   data: () => ({
     propdatajs: {name: "testjs", id: 1},
-    propdatats: {name: "testts", id: 2},
+    propdatats: [
+        {name: "testts", id: 2},
+        {name: "testts-wrong-type", foo: "bar", uuid: "550e8400-e29b-11d4-a716-446655440000"}
+    ],
   }),
   methods: {
     changeTheme() {
