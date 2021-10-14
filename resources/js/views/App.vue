@@ -59,7 +59,6 @@ export default {
       //   console.log(el);
       // });
 
-      // @ts-ignore
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
     },
   },
