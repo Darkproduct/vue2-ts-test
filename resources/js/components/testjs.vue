@@ -9,9 +9,7 @@
     <v-divider></v-divider>
 
     <v-row class="pa-2" no-gutters>
-      <div>
-        Id:
-      </div>
+      <div>Id:</div>
       <div>
         {{ testprop.id }}
       </div>
@@ -21,16 +19,16 @@
 
 <script>
 export default {
-  name: "TestTs",
+  name: 'TestTs',
   props: {
     testprop: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {};
-  }
+  },
 };
 </script>
 

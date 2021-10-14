@@ -41,7 +41,7 @@ mix
       }),
       new ESLintPlugin({
         extensions: Extensions,
-        fix: false,
+        fix: true,
         emitError: true,
         emitWarning: true,
         failOnError: true,

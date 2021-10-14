@@ -7,19 +7,19 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 
-Vue.use(Vuetify)
+Vue.use(Vuetify);
 const opts = {
-    theme: {
-        dark: true
-    }
+  theme: {
+    dark: true,
+  },
 };
 
 import App from '@/js/views/App.vue';
 
 const app = new Vue({
-    el: '#app',
-    vuetify: new Vuetify(opts),
-    render: h => h(App)
+  el: '#app',
+  vuetify: new Vuetify(opts),
+  render: (h) => h(App),
 });
 
 export default app;

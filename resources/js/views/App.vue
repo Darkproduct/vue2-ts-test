@@ -12,9 +12,11 @@
 
     <v-main>
       <p>Inline Prop:</p>
-      <TestJS :testprop="{name: 'testjs', id: '1'}"></TestJS>
-      <TestTS :testprop="{name: 'testts', id: '2'}"></TestTS>
-      <TestTS :testprop="{name: 'testts-wrong-type', foo: 'bar', uuid: '550e8400-e29b-11d4-a716-446655440000'}"></TestTS>
+      <TestJS :testprop="{ name: 'testjs', id: '1' }"></TestJS>
+      <TestTS :testprop="{ name: 'testts', id: '2' }"></TestTS>
+      <TestTS
+        :testprop="{ name: 'testts-wrong-type', foo: 'bar', uuid: '550e8400-e29b-11d4-a716-446655440000' }"
+      ></TestTS>
       <p>Bind Prop:</p>
       <TestJS :testprop="propdatajs"></TestJS>
       <TestTS :testprop="propdatats[0]"></TestTS>
@@ -28,19 +30,19 @@
 </template>
 
 <script>
-import TestJS from "@components/testjs.vue";
-import TestTS from "@components/testts.vue";
+import TestJS from '@components/testjs.vue';
+import TestTS from '@components/testts.vue';
 
 export default {
   components: {
     TestJS,
-    TestTS
+    TestTS,
   },
   data: () => ({
-    propdatajs: {name: "testjs", id: 1},
+    propdatajs: { name: 'testjs', id: 1 },
     propdatats: [
-        {name: "testts", id: 2},
-        {name: "testts-wrong-type", foo: "bar", uuid: "550e8400-e29b-11d4-a716-446655440000"}
+      { name: 'testts', id: 2 },
+      { name: 'testts-wrong-type', foo: 'bar', uuid: '550e8400-e29b-11d4-a716-446655440000' },
     ],
   }),
   methods: {
@@ -59,10 +61,9 @@ export default {
 
       // @ts-ignore
       this.$vuetify.theme.dark = !this.$vuetify.theme.dark;
-    }
+    },
   },
-  computed: {
-  }
+  computed: {},
 };
 </script>
 

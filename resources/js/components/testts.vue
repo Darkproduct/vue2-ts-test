@@ -9,9 +9,7 @@
     <v-divider></v-divider>
 
     <v-row class="pa-2" no-gutters>
-      <div>
-        Id:
-      </div>
+      <div>Id:</div>
       <div>
         {{ testprop.id }}
       </div>
@@ -20,21 +18,21 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropType } from "vue";
+import Vue, { PropType } from 'vue';
 
-import TestType from "@/js/types/testtype.js";
+import TestType from '@/js/types/testtype.js';
 
 export default Vue.extend({
-  name: "TestTs",
+  name: 'TestTs',
   props: {
     testprop: {
       type: Object as PropType<TestType>,
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {};
-  }
+  },
 });
 </script>
 
