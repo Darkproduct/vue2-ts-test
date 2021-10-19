@@ -7,6 +7,7 @@
 
 ## Current problem:
 
+### Initial
 ESLint does use the `@typescript-eslint` parser for all files:
 
 ```
@@ -44,3 +45,10 @@ TS2339: Property '$vuetify' does not exist on type '{ changeTheme(): void; }'.
 ```
 
 In `testjs.vue` the `espree` parser should be used and not `@typescript-eslint`.
+
+### Update
+It seems like using `@typescript-eslint` for all files is intended, to be able to do type linting, which is what I want. 
+
+See:
+ - https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+ - https://github.com/vuejs/vue-eslint-parser/issues/104
