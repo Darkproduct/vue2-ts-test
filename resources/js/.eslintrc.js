@@ -1,11 +1,14 @@
-// https://www.digitalocean.com/community/tutorials/vuejs-vue-eslint-prettier
+const { resolve } = require("path");
 
 module.exports = {
   root: true,
+  env: {
+    node: true,
+  },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended', // Uses the recommended rules from the @typescript-eslint/eslint-plugin
-    // "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
     'plugin:vue/essential', // Use this if you are using Vue.js 2.x.
     'plugin:prettier/recommended', // Last extension
   ],
@@ -13,7 +16,7 @@ module.exports = {
   parserOptions: {
     parser: {
       // Script parser for `<script>`
-      js: 'espree',
+      js: '@typescript-eslint/parser',
 
       // Script parser for `<script lang="ts">`
       ts: '@typescript-eslint/parser',
@@ -25,6 +28,8 @@ module.exports = {
     },
     ecmaVersion: 2020, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module', // Allows for the use of imports
+    project: [resolve(__dirname, '../../tsconfig.eslint.json')],
+    // extraFileExtensions: [".vue"], // already added with the tsconfig
   },
   rules: {
     // Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
